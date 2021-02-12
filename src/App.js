@@ -1,11 +1,9 @@
 import React from 'react';
-import Main from './components/layout/Main';
-import Navbar from './components/layout/Navbar';
+import Main from './components/Main';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Main />
     </div>
   );
