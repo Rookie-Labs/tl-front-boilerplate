@@ -1,5 +1,10 @@
 module.exports = {
-  extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/react'],
+  extends: [
+    'airbnb',
+    'plugin:prettier/recommended',
+    'eslint-config-prettier',
+    'prettier/react'
+  ],
   env: {
     browser: true,
     commonjs: true,
@@ -17,7 +22,7 @@ module.exports = {
   rules: {
     'jsx-a11y/href-no-hash': ['off'],
     'prettier/prettier': 'warn',
-    'react/jsx-filename-extension': ['warn', { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': ['warn', {extensions: ['.js', '.jsx']}],
     'max-len': [
       'warn',
       {

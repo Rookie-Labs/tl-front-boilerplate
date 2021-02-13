@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
-const Card = ({ image, heading, body }) => {
+const Card = ({image, heading, body}) => {
   return (
     <div className="card">
       <img src={image} alt="Card title" className="card__image" />
