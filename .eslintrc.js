@@ -7,6 +7,13 @@ module.exports = {
     jest: true,
     node: true
   },
+  parserOptions: {
+    ecmaVersion: 2019,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
   rules: {
     'jsx-a11y/href-no-hash': ['off'],
     'prettier/prettier': 'warn',
