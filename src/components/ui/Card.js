@@ -1,11 +1,25 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faMagic,
+  faPaintBrush,
+  faSitemap
+} from '@fortawesome/free-solid-svg-icons';
 
-const Card = ({image, heading, body}) => {
+const Card = ({ image, heading, body }) => {
+  const [icon, setIcon] = useState(faMagic);
+
+  useEffect(() => {
+    if (image === 'dependencies') setIcon(faMagic);
+    if (image === 'architecture') setIcon(faSitemap);
+    if (image === 'styles') setIcon(faPaintBrush);
+  }, []);
+
   return (
     <div className="card">
-      <img src={image} alt="Card title" className="card__image" />
-      <h3 className="card__heading">{heading}</h3>
+      <FontAwesomeIcon icon={icon} className="card__image" />
+      <h2 className="card__heading">{heading}</h2>
       <p className="card__body">{body}</p>
     </div>
   );
