@@ -1,14 +1,21 @@
 import React from 'react';
 import Button from '../ui/Button';
 import Card from '../ui/Card';
-import { feature1, feature2, feature3 } from '../data/copies';
+import copies from '../data/copies';
+import Bitcoin from '../../assets/bitcoin_comp.svg';
 
 const Main = () => {
   return (
     <main className="main">
       <section className="main__hero">
-        {/* eslint-disable-next-line react/no-unescaped-entities */}
-        <h1>Turin Labs x Satoshi's G.</h1>
+        <h1>
+          Turin Labs{' '}
+          <span className="span__image">
+            <img src={Bitcoin} alt="Bitcoin" />
+          </span>{' '}
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
+          Satoshi's G.
+        </h1>
         <p>
           React-based Web App boilerplate to be used as starting point for React
           SPAs
@@ -18,16 +25,22 @@ const Main = () => {
       <section className="main__features">
         <Card
           image="dependencies"
-          heading={feature1.heading}
-          body={feature1.body}
+          heading={copies.feature1.heading}
+          body={copies.feature1.body}
+          links={copies.feature1.links}
         />
         <Card
           image="architecture"
-          heading={feature2.heading}
-          body={feature2.body}
+          heading={copies.feature2.heading}
+          body={copies.feature2.body}
+          links={null}
         />
-        {/* eslint-disable-next-line prettier/prettier */}
-        <Card image="styles" heading={feature3.heading} body={feature3.body} />
+        <Card
+          image="styles"
+          heading={copies.feature3.heading}
+          body={copies.feature3.body}
+          links={null}
+        />
       </section>
     </main>
   );

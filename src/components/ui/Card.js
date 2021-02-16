@@ -7,7 +7,7 @@ import {
   faSitemap
 } from '@fortawesome/free-solid-svg-icons';
 
-const Card = ({ image, heading, body }) => {
+const Card = ({ image, heading, body, links }) => {
   const [icon, setIcon] = useState(faMagic);
 
   useEffect(() => {
@@ -20,7 +20,18 @@ const Card = ({ image, heading, body }) => {
     <div className="card">
       <FontAwesomeIcon icon={icon} className="card__image" />
       <h2 className="card__heading">{heading}</h2>
-      <p className="card__body">{body}</p>
+      {body}
+      {links && (
+        <ul>
+          {links.map((link) => (
+            <li>
+              <a href={link.src} target="_blank" rel="noreferrer">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
