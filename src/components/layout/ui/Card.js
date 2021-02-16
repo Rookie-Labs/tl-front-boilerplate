@@ -6,9 +6,12 @@ import {
   faPaintBrush,
   faSitemap
 } from '@fortawesome/free-solid-svg-icons';
+import { useRecoilValue } from 'recoil';
+import atomTheme from '../store/layout.atoms';
 
 const Card = ({ image, heading, body, links }) => {
   const [icon, setIcon] = useState(faMagic);
+  const theme = useRecoilValue(atomTheme);
 
   useEffect(() => {
     if (image === 'dependencies') setIcon(faMagic);
@@ -17,14 +20,14 @@ const Card = ({ image, heading, body, links }) => {
   }, []);
 
   return (
-    <div className="card">
-      <FontAwesomeIcon icon={icon} className="card__image" />
+    <div className={theme === 'light' ? 'card light-theme' : 'card dark-theme'}>
+      <FontAwesomeIcon icon={icon} className="card__image light-theme" />
       <h2 className="card__heading">{heading}</h2>
       {body}
       {links && (
         <ul>
-          {links.map((link) => (
-            <li>
+          {links.map((link, index) => (
+            <li key={index.toString()}>
               <a href={link.src} target="_blank" rel="noreferrer">
                 {link.name}
               </a>

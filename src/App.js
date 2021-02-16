@@ -1,13 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Main from './components/layout/Main';
+import { RecoilRoot } from 'recoil';
+import Main from './components/routes/home/Main';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Main} />
-      </Switch>
+      <RecoilRoot>
+        <Switch>
+          <Route exact path="/" component={Main} />
+        </Switch>
+      </RecoilRoot>
     </BrowserRouter>
   );
 };

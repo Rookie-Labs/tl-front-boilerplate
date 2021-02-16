@@ -1,0 +1,40 @@
+/* THEME
+========================================================= */
+
+/* COLORS
+========================================================= */
+
+$grey: #6F6764;
+$dark-grey: #1C1D1E;
+$almost-black: #2E2E36;
+$mist: #DEDFE4;
+$green: #5CB399;
+$purplu: #5733CC;
+
+/* SHADOWS
+========================================================= */
+
+$subtle-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.05);
+$button-glow: 0px 0px 10px 0px rgba(87, 51, 204, 0.4);
+$button-glow-hover: 0px 0px 14px 0px rgba(87, 51, 204, 0.7);
+
+/* TOGGLE
+========================================================= */
+
+.light-theme {
+  transition: all 0.5s;
+  --primary-color: white;
+  --secondary-color: white;
+  --accent: #5733CC;
+  --text-color: #2E2E36;
+  --secondary-text-color: #5733CC;
+}
+
+.dark-theme {
+  transition: all 0.5s;
+  --primary-color: #1C1D1E;
+  --secondary-color: #2E2E36;
+  --accent: #5733CC;
+  --text-color: white;
+  --secondary-text-color: #5733CC;
+}

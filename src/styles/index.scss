@@ -1,21 +1,6 @@
 /* VARIABLES
 ========================================================= */
-
-/* COLORS
-========================================================= */
-
-$grey: #6F6764;
-$almost-black: #2E2E36;
-$mist: #DEDFE4;
-$green: #5CB399;
-$purplu: #5733CC;
-
-/* SHADOWS
-========================================================= */
-
-$subtle-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.05);
-$button-glow: 0px 0px 10px 0px rgba(87, 51, 204, 0.4);
-$button-glow-hover: 0px 0px 14px 0px rgba(87, 51, 204, 0.7);
+@import "./theme.scss";
 
 /* GENERAL
 ========================================================= */
@@ -36,20 +21,26 @@ code {
 
 h1 {
   font-size: 3rem;
+  color: var(--text-color);
+}
+
+h2 {
+  color: var(--text-color);
 }
 
 p {
   font-size: 1.125rem;
+  color: var(--text-color);
 }
 
 a {
   text-decoration: none;
-  color: $almost-black;
+  color: var(--text-color);;
 }
 
 a:hover {
-  border-bottom: 1px solid $purplu;
-  color: $purplu;
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 /* COMPONENTS
@@ -58,11 +49,12 @@ a:hover {
 .main {
   width: 100%;
   height: 100%;
-  margin: 4rem 0;
+  padding: 4rem 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: var(--primary-color);
 }
 
 .main__hero {
@@ -120,16 +112,34 @@ a:hover {
   border-radius: 0.5rem;
   box-shadow: $subtle-shadow;
   padding: 2rem;
+  background-color: var(--secondary-color);
 }
 
 .card__image {
   font-size: 2rem;
   height: auto;
-  color: $purplu;
+  color: var(--secondary-text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  //eslint-disable-next-line
+  content: "\2022";
+  color: var(--text-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
 }
 
 li {
   line-height: 1.6;
+}
+
+input:focus {
+  outline: none;
 }
 
 /* ANIMATIONS

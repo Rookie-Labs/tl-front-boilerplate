@@ -1,13 +1,23 @@
 import React from 'react';
-import Button from '../ui/Button';
-import Card from '../ui/Card';
-import copies from '../data/copies';
-import Bitcoin from '../../assets/bitcoin_comp.svg';
+import { useRecoilValue } from 'recoil';
+import Button from '../../layout/ui/Button';
+import Card from '../../layout/ui/Card';
+import copies from '../../data/copies';
+import Bitcoin from '../../../assets/bitcoin_comp.svg';
+import atomTheme from '../../layout/store/layout.atoms';
 
 const Main = () => {
+  const theme = useRecoilValue(atomTheme);
+
   return (
-    <main className="main">
-      <section className="main__hero">
+    <main
+      className={theme === 'light' ? 'main light-theme' : 'main dark-theme'}
+    >
+      <section
+        className={
+          theme === 'light' ? 'main__hero light-theme' : 'main__hero dark-theme'
+        }
+      >
         <h1>
           Turin Labs{' '}
           <span className="span__image">
