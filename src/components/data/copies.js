@@ -56,9 +56,8 @@ const copies = {
       <p>
         Ready to plug in your favorite component library, like MaterialUI or
         AntD.
-        <br /> <br /> You can go "rogue" and develop your own components and
-        style them with SASS. As a library of icons, we recommend react/icons or
-        Fontawesome.
+        <br /> <br /> You can develop your own components and style them with
+        SASS. As a library of icons, we recommend react/icons or Fontawesome.
       </p>
     )
   }

@@ -1,13 +1,14 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import Button from '../../layout/ui/Button';
+import CTA from '../../layout/ui/CTA';
 import Card from '../../layout/ui/Card';
 import copies from '../../data/copies';
 import Bitcoin from '../../../assets/bitcoin_comp.svg';
-import atomTheme from '../../layout/store/layout.atoms';
+import { chosenTheme } from '../../layout/store/layout.atoms';
+import Button from '../../layout/ui/Button';
 
 const Main = () => {
-  const theme = useRecoilValue(atomTheme);
+  const theme = useRecoilValue(chosenTheme);
 
   return (
     <main
@@ -30,7 +31,10 @@ const Main = () => {
           React-based Web App boilerplate to be used as starting point for React
           SPAs
         </p>
-        <Button />
+        <div className="hero__actions">
+          <CTA />
+          <Button />
+        </div>
       </section>
       <section className="main__features">
         <Card

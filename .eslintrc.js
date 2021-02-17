@@ -3,7 +3,7 @@ module.exports = {
     'airbnb',
     'eslint-config-prettier',
     'prettier/react',
-    'plugin:prettier/recommended',
+    'plugin:prettier/recommended'
   ],
   env: {
     browser: true,

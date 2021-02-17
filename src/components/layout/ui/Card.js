@@ -7,11 +7,11 @@ import {
   faSitemap
 } from '@fortawesome/free-solid-svg-icons';
 import { useRecoilValue } from 'recoil';
-import atomTheme from '../store/layout.atoms';
+import { chosenTheme } from '../store/layout.atoms';
 
 const Card = ({ image, heading, body, links }) => {
   const [icon, setIcon] = useState(faMagic);
-  const theme = useRecoilValue(atomTheme);
+  const theme = useRecoilValue(chosenTheme);
 
   useEffect(() => {
     if (image === 'dependencies') setIcon(faMagic);

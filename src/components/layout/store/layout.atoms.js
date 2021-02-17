@@ -1,6 +1,9 @@
+/* eslint-disable import/prefer-default-export */
 import { atom } from 'recoil';
 
-export default atom({
+const chosenTheme = atom({
   key: 'theme',
   default: 'light'
 });
+
+export { chosenTheme };

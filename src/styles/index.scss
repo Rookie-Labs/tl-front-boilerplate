@@ -33,12 +33,12 @@ p {
   color: var(--text-color);
 }
 
-a {
+.card a {
   text-decoration: none;
   color: var(--text-color);;
 }
 
-a:hover {
+.card a:hover {
   border-bottom: 1px solid var(--accent);
   color: var(--accent);
 }
@@ -65,6 +65,13 @@ a:hover {
   margin-bottom: 4rem;  
 }
 
+.hero__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 %main__cta {
   margin-top: 2rem;
   background: $purplu;
@@ -77,15 +84,32 @@ a:hover {
   padding: 0.5rem 1rem;
   cursor: pointer;
   box-shadow: $button-glow;
+  height: 3rem;
 }
 
 .main__cta {
   @extend %main__cta;
+  margin-right: 1.5rem;
 }
 
 .main__cta:hover {
   @extend %main__cta;
   box-shadow: $button-glow-hover;
+  margin-right: 1.5rem;
+}
+
+.secondary-button {
+  @extend %main__cta;
+  background: transparent;
+  color: $purplu;
+  border: 2px solid $purplu;
+  box-shadow: none;
+}
+
+.secondary-button:hover {
+  @extend %main__cta;
+  box-shadow: $button-glow-hover;
+  border: 2px solid $purplu;
 }
 
 .span__image img {
@@ -138,7 +162,7 @@ li {
   line-height: 1.6;
 }
 
-input:focus {
+button:focus {
   outline: none;
 }
 
