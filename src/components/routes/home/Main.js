@@ -19,7 +19,7 @@ const Main = () => {
           theme === 'light' ? 'main__hero light-theme' : 'main__hero dark-theme'
         }
       >
-        <h1>
+        <h1 className={theme === 'light' ? 'light-theme' : 'dark-theme'}>
           Turin Labs{' '}
           <span className="span__image">
             <img src={Bitcoin} alt="Bitcoin" />

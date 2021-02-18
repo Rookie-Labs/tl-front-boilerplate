@@ -33,22 +33,43 @@ p {
   color: var(--text-color);
 }
 
-.card a {
-  text-decoration: none;
-  color: var(--text-color);;
+ul {
+  list-style: none;
 }
 
-.card a:hover {
-  border-bottom: 1px solid var(--accent);
-  color: var(--accent);
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul li::before {
+  //eslint-disable-next-line
+  content: "\2022";
+  color: var(--text-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+}
+
+li {
+  line-height: 1.6;
+}
+
+button:focus {
+  outline: none;
 }
 
 /* COMPONENTS
 ========================================================= */
 
+/* HOME
+========================================================= */
+
 .main {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 4rem 0;
   display: flex;
   flex-direction: column;
@@ -145,25 +166,51 @@ p {
   color: var(--secondary-text-color);
 }
 
-ul {
-  list-style: none;
+.card a {
+  text-decoration: none;
+  color: var(--text-color);;
 }
 
-ul li::before {
-  //eslint-disable-next-line
-  content: "\2022";
-  color: var(--text-color);
-  font-weight: bold;
-  display: inline-block;
-  width: 1rem;
+.card a:hover {
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent);
 }
 
-li {
-  line-height: 1.6;
+/* CRYPTO
+========================================================= */
+
+.crypto-components {
+  width: 100%;
+  height: 100%;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--primary-color);
 }
 
-button:focus {
-  outline: none;
+.crypto-components__cards {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr;
+  row-gap: 3rem;
+}
+
+.cards__upper-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cards__upper-row--graph {
+  flex-basis: 66%;
+}
+
+.cards__upper-row--top-cryptos {
+  flex-basis: 33%;
 }
 
 /* ANIMATIONS
