@@ -1,13 +1,12 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import CTA from '../../layout/ui/CTA';
-import Card from '../../layout/ui/Card';
+import CTA from '../../generic_components/ui/CTA';
+import Card from '../../generic_components/ui/Card';
 import copies from '../../data/copies';
-import Bitcoin from '../../../assets/bitcoin_comp.svg';
-import { chosenTheme } from '../../layout/store/layout.atoms';
-import Button from '../../layout/ui/Button';
+import Bitcoin from '../../assets/bitcoin_comp.svg';
+import { chosenTheme } from '../../generic_components/store/layout.atoms';
 
-const Main = () => {
+const Home = () => {
   const theme = useRecoilValue(chosenTheme);
 
   return (
@@ -33,7 +32,6 @@ const Main = () => {
         </p>
         <div className="hero__actions">
           <CTA />
-          <Button />
         </div>
       </section>
       <section className="main__features">
@@ -60,4 +58,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
