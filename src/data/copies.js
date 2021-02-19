@@ -51,13 +51,15 @@ const copies = {
     )
   },
   feature3: {
-    heading: 'Stylish styles',
+    heading: 'Much style, such WOW',
     body: (
       <p>
-        Ready to plug in your favorite component library, like MaterialUI or
-        AntD.
-        <br /> <br /> You can develop your own components and style them with
-        SASS. As a library of icons, we recommend react/icons or Fontawesome.
+        This template is ready to plug in your favorite component library, like
+        MaterialUI or AntD.
+        <br /> <br /> We strongly recommend using AntD in combination with
+        Tailwind. <br /> <br />
+        Check the readme file in the Github repository to see how to set up
+        properly
       </p>
     )
   }

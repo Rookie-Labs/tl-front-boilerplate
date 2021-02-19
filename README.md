@@ -12,7 +12,8 @@ Keep reading and happy coding!
 2) Run `npm install` to install its dependencies.
 3) Run `npm start`in the root folder to spin it up.
 4) Check all readme files in the main folders to understand the project's architecture.
-5) If you plan to use Tailwind, follow [this steps](https://tailwindcss.com/docs/guides/create-react-app) to set it up properly.
+5) If you plan to use AntD+Tailwind, read the 'Components Library and Styling' section.
+6) When you are ready to start coding, remove all demo files.
 
 ## Architecture
 
